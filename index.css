@@ -13,7 +13,6 @@ body{
     height: 801px;
 }
 .input{
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,12 +31,44 @@ body{
     border-radius: 10px;
     
 }
-#marker{
-    border-radius: 50%;
-    width: 40px;
-    height: 20px;
-    border: none;
+input{
+    font-size: 20px
 }
+/* target all checkboxes */
+input[type="checkbox"] {
+    -webkit-appearance: none; /* remove the default checkbox style in webkit browsers */
+    border-radius: 50%; /* make the border circular */
+    width: 30px; /* set the width of the checkbox */
+    height: 30px; /* set the height of the checkbox */
+    border: 1px solid #aaa; /* add a border */
+    outline: none; /* remove the outline when the checkbox is focused */
+    cursor: pointer; /* show the pointer cursor on hover */
+    vertical-align: middle; /* align the checkbox with the text */
+    position: relative; /* position the pseudo-element */
+    ;
+  }
+  
+  
+  
+  /* add the checkmark pseudo-element */
+  input[type="checkbox"]:checked::before {
+    content: '\2714'; /* use the checkmark character */
+    color: white; /* set the color to white */
+    position: absolute; /* position the pseudo-element */
+    top: 50%; /* move the pseudo-element vertically */
+    left: 50%; /* move the pseudo-element horizontally */
+    transform: translate(-50%, -50%); /* center the pseudo-element */
+  }
+  
+  
+  /* add a background color to checked checkboxes */
+  input[type="checkbox"]:checked {
+    background-color: #9b77f3; /* use a blue color, change as desired */
+  }
+  .task-check:checked + .task-text {
+    text-decoration: line-through;
+  }
+  
 #taskinput{
     width: auto;
     border: none;
@@ -63,9 +94,10 @@ body{
     position: absolute;
     top: 250px;
     flex-direction: column;
-    background-color:rgb(180, 173, 173);
+    background-color:white;
     box-shadow: 4px,3px,2px;
-    height: 500px;
+    max-height: 500px; /* set the maximum height of the tasklist */
+    overflow-y: auto; /* add a vertical scrollbar if the tasklist exceeds the maximum height */
     width: 700px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgb(112, 112, 112);
@@ -78,12 +110,27 @@ body{
     padding: 10px;
     background-color: #fff;
     width: 665px;
+    justify-content: space-between;
+
   }
+  .task span{
+    font-size: 20px
+  }
+
 .footer{
     display: flex;
     justify-content: center;
     position: relative;
-    top: 450px;
+    top: 430px;
     color: #808080;
+}
+nav button{
+    background-color: white;
+    border: none;
+}
+nav{
+    background-color: white;
+    position: relative;
+    top: 450px;
 }
 

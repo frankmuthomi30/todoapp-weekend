@@ -12,15 +12,27 @@ taskForm.addEventListener('submit', function(event) {
   task.classList.add('task');
   task.innerHTML = `
     <input type="checkbox" class="task-check">
-    <span class="task-text">${taskText}</span>
+    <span class="task-text" contenteditable ="true">${taskText}</span>
     <button class="task-delete">Delete</button>
   `;
 
   // add the new task to the task list
   taskList.appendChild(task);
 
+  // deleting a task
+  taskList.addEventListener('click', function(event) {
+    // check if the clicked element is a task-delete button
+    if (event.target.classList.contains('task-delete')) {
+      // remove the parent task element
+      event.target.parentElement.remove();
+    }
+  });
+
   // clear the input field
   document.querySelector('#taskinput').value = '';
+
   
-  console.log('Task added successfully!'); // check that the task is added
+  
+  
+  
 });
