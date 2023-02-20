@@ -1,0 +1,89 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #808080;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 1440px;
+    height: 801px;
+}
+.input{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./bg-desktop-light.jpg);
+    width: 1440px;
+    height: 300px;
+}
+.head{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 450px;
+    height: 50px;
+    border-radius: 10px;
+    
+}
+#marker{
+    border-radius: 50%;
+    width: 40px;
+    height: 20px;
+    border: none;
+}
+#taskinput{
+    width: auto;
+    border: none;
+    height: 30px;
+    width: 340px;
+}
+#add{
+    border: none;
+    background-color: white;
+}
+.tasklist-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#tasklist{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+    position: absolute;
+    top: 250px;
+    flex-direction: column;
+    background-color:rgb(180, 173, 173);
+    box-shadow: 4px,3px,2px;
+    height: 500px;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(112, 112, 112);
+    
+}
+.task {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #e6e5ea;
+    padding: 10px;
+    background-color: #fff;
+    width: 665px;
+  }
+.footer{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 450px;
+    color: #808080;
+}
+
